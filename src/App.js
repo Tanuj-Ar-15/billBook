@@ -28,6 +28,8 @@ const App = () => {
       setColorMode(theme)
     }
 
+    console.log("sourab");
+    
     if (isColorModeSet()) {
       return
     }
