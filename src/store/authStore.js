@@ -7,8 +7,8 @@ const useAuthStore = create(( get, set) => ({
   isAuthenticated: false,  
 login: ()=> {
 
+console.log("login");
 
-  
 }
 }));
 
