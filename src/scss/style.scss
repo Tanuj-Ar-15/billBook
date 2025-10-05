@@ -1,5 +1,4 @@
-@use "@coreui/coreui/scss/coreui" as * with ( 
-  $enable-deprecation-messages: false,
+@use "@coreui/coreui/scss/coreui" as * with ($enable-deprecation-messages: false,
 );
 @use "@coreui/chartjs/scss/coreui-chartjs";
 @use "vendors/simplebar";
@@ -15,7 +14,7 @@ body {
   @include transition(padding .15s);
 }
 
-.header > .container-fluid,
+.header>.container-fluid,
 .sidebar-header {
   min-height: calc(4rem + 1px); // stylelint-disable-line function-disallowed-list
 }
@@ -48,7 +47,7 @@ body {
   }
 }
 
-.header > .container-fluid + .container-fluid {
+.header>.container-fluid+.container-fluid {
   min-height: 3rem;
 }
 
@@ -64,4 +63,25 @@ body {
   .footer {
     --cui-footer-bg: var(--cui-body-bg);
   }
+}
+
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 576px) {
+  .min-vh-100 {
+    min-height: 100vh !important;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }

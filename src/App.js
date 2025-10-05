@@ -7,6 +7,7 @@ import './scss/style.scss'
 
 // We use those styles to show code examples, you should remove them in your application.
 import './scss/examples.scss'
+import OTPVerification from './views/pages/login/verify-otp'
 
 // Containers
 const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
@@ -47,6 +48,8 @@ const App = () => {
         <Routes>
           <Route exact path="/login" name="Login Page" element={<Login />} />
           <Route exact path="/register123" name="Login Page" element={<Page404 />} />
+          <Route exact path="/verify-otp" name="Verify OTP Page" element={<OTPVerification />} />
+
 
           <Route exact path="/register" name="Register Page" element={<Register />} />
           <Route exact path="/404" name="Page 404" element={<Page404 />} />
